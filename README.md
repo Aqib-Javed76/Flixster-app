@@ -1,5 +1,6 @@
 
 # Flix
+
 Flix is an app that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
 ## Flix Part 2
@@ -23,13 +24,10 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
-
 <img src="https://github.com/Aqib-Javed76/Flixster-app/blob/master/Gif3.gif" width=600><br>
 
 ### Notes
-
-Describe any challenges encountered while building the app.
+I had problem with variable double being used in movie.java from the lesson videos , which I had to fix to float variable in order for the app to run and display correctly . 
 
 ## Open-source libraries used
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
@@ -39,7 +37,6 @@ Describe any challenges encountered while building the app.
 ## Flix Part 1
 
 ### User Stories
-
 
 #### REQUIRED (10pts)
 - [x] (10pts) User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database API.
