@@ -12,11 +12,12 @@ import java.util.List;
 @Parcel
 public class Movie {
 
+    int movieId;
     String backdropPath;
     String posterPath;
     String title;
     String overview;
-    double rating;
+    float rating;
 
     // empty contructor needed by the Parceler library
     public Movie() {}
@@ -26,7 +27,8 @@ public class Movie {
         posterPath = jsonObject.getString("poster_path");
         title = jsonObject.getString("title");
         overview = jsonObject.getString("overview");
-        rating = jsonObject.getDouble("vote-average");
+        rating = Float.parseFloat( jsonObject.getString("vote_average"));
+        movieId = jsonObject.getInt("id");
     }
 
     public static List<Movie> fromJsonArray(JSONArray movieJsonArray) throws JSONException {
@@ -41,6 +43,14 @@ public class Movie {
 
     public String getPosterPath() {
         return String.format("https://image.tmdb.org/t/p/w342/%s", posterPath);
+    }
+
+    public int getMovieId() {
+        return movieId;
+    }
+
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
     }
 
     public String getBackdropPath() {
